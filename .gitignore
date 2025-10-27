@@ -1,0 +1,156 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environment
+venv/
+env/
+ENV/
+.venv
+
+# Environment Variables
+.env
+.env.local
+.env.production
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Logs
+*.log
+logs/
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# ML Models
+backend/ml_models/*.pt
+backend/ml_models/*.onnx
+backend/ml_models/*.pth
+backend/ml_models/*.bin
+backend/ml_models/*.h5
+!backend/ml_models/.gitkeep
+
+# Storage Files
+backend/storage/uploads/*
+backend/storage/recordings/*
+backend/storage/reports/*
+!backend/storage/uploads/.gitkeep
+!backend/storage/recordings/.gitkeep
+!backend/storage/reports/.gitkeep
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/build/
+frontend/.vite/
+frontend/.env.local
+frontend/.env.production
+
+# Dependencies
+node_modules/
+package-lock.json
+yarn.lock
+
+# Testing
+.coverage
+htmlcov/
+.pytest_cache/
+.tox/
+.hypothesis/
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Temporary files
+*.tmp
+*.temp
+temp/
+tmp/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# pyenv
+.python-version
+
+# Backup files
+*.bak
+*.backup
+
+# Compiled files
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# Archives
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# Media files (except test samples)
+*.mp4
+*.avi
+*.mov
+*.wmv
+*.flv
+*.webm
+*.mp3
+*.wav
+*.ogg
+
+# Uploads directory
+uploads/
+backend/uploads/
+*.audio
+
+# Temporary documentation (keep only README.md)
+*_DOCUMENTATION.md
+*_IMPLEMENTED.md
+*_FIXED.md
+*_READY.md
+*_REVIEW.md
+
+# AI Models cache
+backend/models/
+.deepface/
+.cache/
+
+# OS specific
+*.DS_Store
+Thumbs.db
