@@ -1,12 +1,4 @@
--- ============================================================================
--- ABIS (AI-Based Interview System) - Complete Database Schema
--- ============================================================================
--- This file contains the complete database structure for ABIS
--- Run this file to initialize a fresh database
--- 
--- Usage:
---   mysql -u root -p < init.sql
---   or import via phpMyAdmin
+
 -- ============================================================================
 
 -- Create database
