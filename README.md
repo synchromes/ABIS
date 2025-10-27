@@ -1,6 +1,6 @@
 # 🎯 ABIS - Sistem Wawancara Berbasis AI
 
-**ABIS** (Sistem Wawancara Berbasis AI) adalah sistem wawancara berbasis AI yang menggunakan teknologi canggih untuk menganalisis kandidat secara objektif dan komprehensif.
+**ABIS** (Sistem Wawancara Berbasis AI) adalah sistem wawancara berbasis AI yang menggunakan teknologi canggih untuk menganalisis kandidat secara objektif dan komprehensif. 
 
 ## 📋 Daftar Isi
 
