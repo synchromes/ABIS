@@ -40,3 +40,5 @@ ADD INDEX idx_processing_status (processing_status);
 
 ALTER TABLE interviews
 ADD COLUMN indicators_config JSON DEFAULT NULL;
+
+---
