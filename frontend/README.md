@@ -195,7 +195,7 @@ npm run lint
 3. **Real-time Analysis Display**
    - Emotion indicator dengan confidence level
    - Behavioral metrics (bars)
-   - Radar chart untuk 7 dimensi BerAKHLAK
+   - Radar chart indikator penilaian
    - Live transcript dengan scroll
 
 4. **WebSocket Messages**
@@ -228,7 +228,7 @@ npm run lint
   "type": "transcript_update",
   "data": {
     "text": "...",
-    "berakhlak_scores": {...},
+    "indikator": {...},
     "coherence": 0.87
   }
 }
@@ -242,7 +242,7 @@ npm run lint
    - Color-coded recommendations
 
 2. **Manual Scoring**
-   - Input fields untuk 7 dimensi BerAKHLAK
+   - Input fields untuk indikator penilaian
    - Auto-calculate average dengan AI score
    - Save to backend
 
@@ -372,24 +372,3 @@ COPY nginx.conf /etc/nginx/conf.d/default.conf
 EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
 ```
-
-## Future Enhancements
-
-- [ ] Multi-language support (i18n)
-- [ ] Dark mode
-- [ ] Advanced analytics dashboard
-- [ ] Batch interview processing
-- [ ] Interview scheduling with calendar
-- [ ] Email notifications
-- [ ] Advanced report customization
-- [ ] Interview templates
-- [ ] Candidate self-assessment
-- [ ] Video playback & review
-
-## License
-
-Proprietary - Internal use only
-
-## Support
-
-Untuk bug reports dan feature requests, hubungi tim development.
