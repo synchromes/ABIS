@@ -90,7 +90,7 @@
 ### 1. Clone Repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/abis.git
+git clone https://github.com/synchromes/abis.git
 cd abis
 ```
 
@@ -272,7 +272,7 @@ sudo chown $USER:$USER /var/www/abis
 cd /var/www/abis
 
 # Clone repository
-git clone https://github.com/YOUR_USERNAME/abis.git .
+git clone https://github.com/synchromes/abis.git .
 
 # Setup backend
 cd backend

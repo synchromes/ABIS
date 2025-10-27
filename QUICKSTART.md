@@ -14,7 +14,7 @@ Get ABIS running in **15 minutes**!
 ### 1. Clone Repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/abis.git
+git clone https://github.com/synchromes/abis.git
 cd abis
 ```
 
@@ -103,7 +103,7 @@ Frontend running at: `http://localhost:5173` ✅
 
 ```bash
 # On fresh Ubuntu 20.04+ VPS
-curl -sSL https://raw.githubusercontent.com/YOUR_USERNAME/abis/main/setup_vps.sh | sudo bash
+curl -sSL https://raw.githubusercontent.com/synchromes/abis/main/setup_vps.sh | sudo bash
 ```
 
 The script will:
@@ -117,7 +117,7 @@ The script will:
 
 ```bash
 # On your VPS
-git clone https://github.com/YOUR_USERNAME/abis.git /var/www/abis
+git clone https://github.com/synchromes/abis.git /var/www/abis
 cd /var/www/abis
 sudo ./setup_vps.sh
 ```
@@ -225,5 +225,5 @@ Your ABIS system is ready! Start creating interviews and let AI help you make be
 
 **Need help?**
 - 📖 Full docs: [README.md](README.md)
-- 🐛 Issues: [GitHub Issues](https://github.com/YOUR_USERNAME/abis/issues)
+- 🐛 Issues: [GitHub Issues](https://github.com/synchromes/abis/issues)
 - 💬 Support: your-email@example.com
