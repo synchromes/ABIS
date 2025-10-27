@@ -80,8 +80,8 @@
 ### 1. Clone Repository
 
 ```bash
-git clone https://github.com/synchromes/abis.git
-cd abis
+git clone https://github.com/synchromes/ABIS.git
+cd ABIS
 ```
 
 ### 2. Setup Backend
@@ -264,7 +264,7 @@ sudo chown $USER:$USER /var/www/abis
 cd /var/www/abis
 
 # Clone repository
-git clone https://github.com/synchromes/abis.git .
+git clone https://github.com/synchromes/ABIS.git .
 
 # Setup backend
 cd backend

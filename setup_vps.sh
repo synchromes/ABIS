@@ -2,8 +2,8 @@
 
 # ABIS Initial VPS Setup Script
 # Run this script on a fresh Ubuntu 20.04+ VPS
-# Usage: curl -sSL https://raw.githubusercontent.com/synchromes/abis/main/setup_vps.sh | bash
-# Or: wget -qO- https://raw.githubusercontent.com/synchromes/abis/main/setup_vps.sh | bash
+# Usage: curl -sSL https://raw.githubusercontent.com/synchromes/ABIS/main/setup_vps.sh | bash
+# Or: wget -qO- https://raw.githubusercontent.com/synchromes/ABIS/main/setup_vps.sh | bash
 
 set -e  # Exit on error
 
