@@ -19,31 +19,21 @@
 ## 🎨 Features
 
 ### Core Features
-- ✅ **Live Interview Recording** - Record with webcam & audio
-- ✅ **AI Transcription** - Whisper large-v2 model for accurate speech-to-text
-- ✅ **Dual Emotion Detection** - Facial (DeepFace) + Speech emotions
-- ✅ **Hybrid Semantic Analysis** - Exact + AI-based matching for accurate assessment
-- ✅ **Custom Indicators** - Define interview criteria per position
-- ✅ **AI Assessment** - Automatic scoring with reasoning
-- ✅ **Manual Scoring** - Override AI scores with manual input
-- ✅ **Dynamic Score Calculation** - AI (60%) + Manual (40%) weighted scoring
+- ✅ **Live Interview Recording** - Merekam langsung menggunakan webcam & audio
+- ✅ **AI Transcription** - Whisper large-v2 model untuk akurasi speech-to-text
+- ✅ **Dual Emotion Detection** - Sentimen/Emosi Wajah (DeepFace) + Suara
+- ✅ **Hybrid Semantic Analysis** - Analisis semantik berdasarkan hasil jawaban
+- ✅ **Custom Indicators** - Kustomisasi indikator penilaian
+- ✅ **AI Assessment** - Memberikan skor otomatis beserta alasannya
+- ✅ **Manual Scoring** - Pewawancara bisa memasukan penilaian
+- ✅ **Dynamic Score Calculation** - Perhitungan bobot skor antara AI dan Pewawancara
 
 ### Advanced Features
-- ✅ **Dashboard Analytics** - Comprehensive statistics and insights
-- ✅ **AI Hiring Recommendations** - 5 decision levels with confidence scores
-- ✅ **Candidate Comparison** - Side-by-side candidate analysis
-- ✅ **Interview Transcript Viewer** - Full transcript with matched sentences
-- ✅ **Real-time Audio Visualizer** - Waveform visualization during recording
-- ✅ **Timer & Stopwatch** - Track interview duration
-- ✅ **Emotion Charts** - Separated facial and speech emotion tracking
-- ✅ **Audio Cleanup** - Automatic file management
-
-### UI/UX Features
-- ✅ **Professional Dashboard** - Clean, simple, presentation-ready
-- ✅ **Responsive Design** - Works on desktop and mobile
-- ✅ **Pagination** - Efficient data browsing (10/20/50/100 items)
-- ✅ **Real-time Feedback** - Toast notifications for all actions
-- ✅ **Loading States** - Clear indicators for async operations
+- ✅ **Dashboard Analytics**
+- ✅ **Interview Transcript Viewer** - Transcript penuh calon pegawai
+- ✅ **Real-time Audio Visualizer** - Visualisasi gelombang suara ketika wawancara berlangsung
+- ✅ **Timer & Stopwatch** - Timestamp ketika wawancara berlangsung
+- ✅ **Emotion Charts** - Grafik sentimen emosi wajah dan suara
 
 ---
 
@@ -73,15 +63,15 @@
 
 ### System Requirements
 - **OS:** Windows 10+, Ubuntu 20.04+, or macOS 12+
-- **RAM:** Minimum 8GB (16GB recommended for AI processing)
-- **Storage:** 10GB free space (for AI models)
-- **CPU:** Multi-core processor recommended
+- **RAM:** Minimum 8GB (16GB rekomendasi untuk AI Processing)
+- **Storage:** 10GB free space (untuk AI model)
+- **CPU:** Multi-core processor direkomendasikan
 
 ### Software Requirements
-- **Python:** 3.10 or 3.11 (3.12+ not tested)
+- **Python:** 3.10 or 3.11 (3.12+ belum dicoba)
 - **Node.js:** 18.x or 20.x
 - **MySQL:** 8.0+
-- **FFmpeg:** Required for audio processing
+- **FFmpeg:** Dibutuhkan untuk audio processing
 
 ---
 
@@ -213,7 +203,7 @@ npm run build
 npm run preview
 ```
 
-Frontend will run at: `http://localhost:5173` or `http://localhost:3000`
+Frontend akan berjalan di: `http://localhost:5173` or `http://localhost:3000`
 
 ---
 
@@ -223,7 +213,6 @@ Frontend will run at: `http://localhost:5173` or `http://localhost:3000`
 
 - Ubuntu 20.04+ VPS
 - Root or sudo access
-- Domain name (optional but recommended)
 - Minimum 4GB RAM, 2 CPU cores
 
 ### 1. Initial Server Setup
@@ -479,33 +468,30 @@ Frontend configuration in `.env`:
 
 ### 1. Login
 
-Default credentials (change after first login):
+Default credentials:
 - **Username:** admin
 - **Password:** admin123
 
-### 2. Create Interview
+### 2. Membuat Interview
 
-1. Go to **Interviews** page
-2. Click **"+ Buat Interview Baru"**
-3. Fill in candidate details:
-   - Name
-   - Position
-   - Email (optional)
-   - Phone (optional)
-   - Notes (optional)
-4. Click **"Simpan"**
+1. Pergi ke halaman **Interviews**
+2. Klik **"+ Buat Interview Baru"**
+3. Isi detail calon pegawai:
+   - Nama
+   - Email
+   - Nomor Identitas
+   - Posisi
+   - Jadwal
+4. Click **"Lanjut"**
 
-### 3. Setup Interview Indicators
+### 3. Setup indikator penilaian
 
-1. Open interview details
-2. Go to **"Indikator Penilaian"** tab
-3. Add indicators with:
-   - Name (e.g., "Kemampuan Komunikasi")
-   - Description (what to look for)
-   - Weight (1-10, higher = more important)
-   - Keywords (comma-separated, for semantic matching)
+1. Tambahkan indikator dengan isi:
+   - Nama indikator (mis., "Kepemimpinan")
+   - Deskripsi (mis., "Kemampuan memimpin tim dan mengambil keputusan")
+   - Bobot (1-10, tinggi = semakin penting)
 
-### 4. Conduct Interview
+### 4. Memulai Wawancara
 
 1. Click **"Mulai Wawancara"**
 2. Grant camera and microphone permissions
