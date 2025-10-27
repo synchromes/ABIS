@@ -68,7 +68,7 @@
 - **CPU:** Prosesor multi-core direkomendasikan
 
 ### Persyaratan Software
-- **Python:** 3.10 atau 3.11 (3.12+ belum dicoba)
+- **Python:** 3.10+ (development di 3.13.9)
 - **Node.js:** 18.x atau 20.x
 - **MySQL:** 8.0+
 - **FFmpeg:** Dibutuhkan untuk pemrosesan audio
