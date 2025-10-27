@@ -705,30 +705,18 @@ free -h
 
 ## 📄 Lisensi
 
-Proyek ini adalah perangkat lunak proprietary. All rights reserved.
+Proyek ini merupakan prototype untuk ASN Digital AI Hackaton
 
 ---
 
-## 👥 Kontributor
+## 👥 Tim
 
-- **Muhammad** - Pengembangan awal
-
----
-
-## 📞 Dukungan
-
-Untuk masalah, pertanyaan, atau kontribusi:
-- Buat issue di GitHub
-- Email: your-email@example.com
+- **Muchamad Ramadhan Surya**
+- **Ilham Sidik Saksena**
+- **Yonita Anggrearia**
 
 ---
 
-## 🎉 Ucapan Terima Kasih
-
-- **Whisper** oleh OpenAI - Speech recognition
-- **DeepFace** - Deteksi emosi wajah
-- **Sentence Transformers** - Analisis teks semantik
-- **FastAPI** - Framework web modern
-- **React** - Library UI
+## TVRI Kalimantan Barat
 
 ---
