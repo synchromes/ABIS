@@ -101,7 +101,7 @@ export default function Login() {
         </div>
 
         <p className="text-center text-sm text-gray-600 mt-6">
-          © 2024 ABIS. Sistem Internal ASN.
+          Prototype AI Non CAT Wawancara
         </p>
       </div>
     </div>
