@@ -154,3 +154,7 @@ backend/models/
 # OS specific
 *.DS_Store
 Thumbs.db
+
+# Database fix scripts (local use only)
+backend/fix_database.py
+backend/fix_database_schema.sql
