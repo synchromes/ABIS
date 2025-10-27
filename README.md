@@ -1,81 +1,81 @@
-# 🎯 ABIS - AI-Based Interview System
+# 🎯 ABIS - Sistem Wawancara Berbasis AI
 
-**ABIS** (AI-Based Interview System) adalah sistem wawancara berbasis AI yang menggunakan teknologi advanced untuk analisis kandidat secara objektif dan komprehensif.
+**ABIS** (Sistem Wawancara Berbasis AI) adalah sistem wawancara berbasis AI yang menggunakan teknologi canggih untuk menganalisis kandidat secara objektif dan komprehensif.
 
-## 📋 Table of Contents
+## 📋 Daftar Isi
 
-- [Features](#-features)
-- [Technology Stack](#-technology-stack)
-- [Requirements](#-requirements)
-- [Installation (Local Development)](#-installation-local-development)
-- [Deployment to VPS Linux](#-deployment-to-vps-linux)
-- [Configuration](#-configuration)
-- [Usage Guide](#-usage-guide)
-- [API Documentation](#-api-documentation)
-- [Troubleshooting](#-troubleshooting)
+- [Fitur](#-fitur)
+- [Teknologi yang Digunakan](#-teknologi-yang-digunakan)
+- [Persyaratan](#-persyaratan)
+- [Instalasi (Pengembangan Lokal)](#-instalasi-pengembangan-lokal)
+- [Deploy ke VPS Linux](#-deploy-ke-vps-linux)
+- [Konfigurasi](#-konfigurasi)
+- [Panduan Penggunaan](#-panduan-penggunaan)
+- [Dokumentasi API](#-dokumentasi-api)
+- [Pemecahan Masalah](#-pemecahan-masalah)
 
 ---
 
-## 🎨 Features
+## 🎨 Fitur
 
-### Core Features
+### Fitur Utama
 - ✅ **Live Interview Recording** - Merekam langsung menggunakan webcam & audio
-- ✅ **AI Transcription** - Whisper large-v2 model untuk akurasi speech-to-text
-- ✅ **Dual Emotion Detection** - Sentimen/Emosi Wajah (DeepFace) + Suara
-- ✅ **Hybrid Semantic Analysis** - Analisis semantik berdasarkan hasil jawaban
-- ✅ **Custom Indicators** - Kustomisasi indikator penilaian
-- ✅ **AI Assessment** - Memberikan skor otomatis beserta alasannya
-- ✅ **Manual Scoring** - Pewawancara bisa memasukan penilaian
-- ✅ **Dynamic Score Calculation** - Perhitungan bobot skor antara AI dan Pewawancara
+- ✅ **AI Transkripsi** - Model Whisper large-v2 untuk akurasi speech-to-text
+- ✅ **Deteksi Emosi Ganda** - Sentimen/Emosi Wajah (DeepFace) + Suara
+- ✅ **Analisis Semantik Hybrid** - Analisis semantik berdasarkan hasil jawaban
+- ✅ **Indikator Kustom** - Kustomisasi indikator penilaian
+- ✅ **Penilaian AI** - Memberikan skor otomatis beserta alasannya
+- ✅ **Skor Manual** - Pewawancara bisa memasukkan penilaian
+- ✅ **Perhitungan Skor Dinamis** - Perhitungan bobot skor antara AI dan Pewawancara
 
-### Advanced Features
-- ✅ **Dashboard Analytics**
+### Fitur Lanjutan
+- ✅ **Dashboard Analitik**
 - ✅ **Interview Transcript Viewer** - Transcript penuh calon pegawai
 - ✅ **Real-time Audio Visualizer** - Visualisasi gelombang suara ketika wawancara berlangsung
 - ✅ **Timer & Stopwatch** - Timestamp ketika wawancara berlangsung
-- ✅ **Emotion Charts** - Grafik sentimen emosi wajah dan suara
+- ✅ **Grafik Emosi** - Grafik sentimen emosi wajah dan suara
 
 ---
 
-## 🛠 Technology Stack
+## 🛠 Teknologi yang Digunakan
 
 ### Backend
 - **Framework:** FastAPI (Python 3.10+)
 - **Database:** MySQL 8.0+
 - **ORM:** SQLAlchemy 2.0
-- **Authentication:** JWT (python-jose)
-- **AI Models:**
+- **Autentikasi:** JWT (python-jose)
+- **Model AI:**
   - Whisper Large-v2 (faster-whisper)
-  - DeepFace (emotion detection)
-  - Sentence Transformers (semantic analysis)
+  - DeepFace (deteksi emosi)
+  - Sentence Transformers (analisis semantik)
 
 ### Frontend
 - **Framework:** React 18 + Vite
-- **State Management:** Zustand
+- **Manajemen State:** Zustand
 - **Styling:** Tailwind CSS
-- **Charts:** Recharts
+- **Grafik:** Recharts
 - **Routing:** React Router v6
 - **HTTP Client:** Axios
 
 ---
 
-## 📦 Requirements
+## 📦 Persyaratan
 
-### System Requirements
-- **OS:** Windows 10+, Ubuntu 20.04+, or macOS 12+
-- **RAM:** Minimum 8GB (16GB rekomendasi untuk AI Processing)
-- **Storage:** 10GB free space (untuk AI model)
-- **CPU:** Multi-core processor direkomendasikan
+### Persyaratan Sistem
+- **OS:** Windows 10+, Ubuntu 20.04+, atau macOS 12+
+- **RAM:** Minimum 8GB (16GB direkomendasikan untuk proses AI)
+- **Storage:** 10GB ruang bebas (untuk model AI)
+- **CPU:** Prosesor multi-core direkomendasikan
 
-### Software Requirements
-- **Python:** 3.10 or 3.11 (3.12+ belum dicoba)
-- **Node.js:** 18.x or 20.x
+### Persyaratan Software
+- **Python:** 3.10 atau 3.11 (3.12+ belum dicoba)
+- **Node.js:** 18.x atau 20.x
 - **MySQL:** 8.0+
-- **FFmpeg:** Dibutuhkan untuk audio processing
+- **FFmpeg:** Dibutuhkan untuk pemrosesan audio
 
 ---
 
-## 🚀 Installation (Local Development)
+## 🚀 Instalasi (Pengembangan Lokal)
 
 ### 1. Clone Repository
 
@@ -84,9 +84,9 @@ git clone https://github.com/synchromes/abis.git
 cd abis
 ```
 
-### 2. Backend Setup
+### 2. Setup Backend
 
-#### Install Python Dependencies
+#### Install Dependensi Python
 
 ```bash
 cd backend
@@ -104,7 +104,7 @@ pip install -r requirements.txt
 
 #### Install FFmpeg
 
-**Windows (using Chocolatey):**
+**Windows (menggunakan Chocolatey):**
 ```bash
 choco install ffmpeg
 ```
@@ -115,24 +115,24 @@ sudo apt update
 sudo apt install ffmpeg
 ```
 
-**macOS (using Homebrew):**
+**macOS (menggunakan Homebrew):**
 ```bash
 brew install ffmpeg
 ```
 
 #### Setup Database
 
-1. Create MySQL database:
+1. Buat database MySQL:
 ```sql
 CREATE DATABASE abis_interview CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 ```
 
-2. Create `.env` file in `backend/`:
+2. Buat file `.env` di `backend/`:
 ```env
 # Database
 DATABASE_URL=mysql+pymysql://root:password@localhost:3306/abis_interview
 
-# JWT Authentication
+# Autentikasi JWT
 SECRET_KEY=your-super-secret-key-change-this-in-production
 ALGORITHM=HS256
 ACCESS_TOKEN_EXPIRE_MINUTES=30
@@ -140,40 +140,40 @@ ACCESS_TOKEN_EXPIRE_MINUTES=30
 # CORS
 CORS_ORIGINS=http://localhost:3000,http://localhost:5173
 
-# File Upload
+# Upload File
 UPLOAD_DIR=uploads
 MAX_FILE_SIZE=104857600
 
-# AI Models
+# Model AI
 WHISPER_MODEL=large-v2
 WHISPER_DEVICE=cpu
 DEEPFACE_BACKEND=opencv
 ```
 
-3. Run migrations:
+3. Jalankan migrasi:
 ```bash
 # Apply migrations
 python -m alembic upgrade head
 ```
 
-4. Create initial user:
+4. Buat user awal:
 ```bash
 python create_admin.py
 ```
 
-#### Run Backend Server
+#### Jalankan Backend Server
 
 ```bash
 # Development
 python run.py
 
-# Production (using Gunicorn)
+# Produksi (menggunakan Gunicorn)
 gunicorn -w 4 -k uvicorn.workers.UvicornWorker app.main:app --bind 0.0.0.0:8000
 ```
 
-Backend will run at: `http://localhost:8000`
+Backend akan berjalan di: `http://localhost:8000`
 
-### 3. Frontend Setup
+### 3. Setup Frontend
 
 ```bash
 cd frontend
@@ -181,7 +181,7 @@ cd frontend
 # Install dependencies
 npm install
 
-# Create .env file
+# Buat file .env
 cp .env.example .env
 ```
 
@@ -190,38 +190,38 @@ Edit `.env`:
 VITE_API_URL=http://localhost:8000/api
 ```
 
-#### Run Frontend Dev Server
+#### Jalankan Frontend Dev Server
 
 ```bash
 # Development
 npm run dev
 
-# Build for production
+# Build untuk produksi
 npm run build
 
-# Preview production build
+# Preview build produksi
 npm run preview
 ```
 
-Frontend akan berjalan di: `http://localhost:5173` or `http://localhost:3000`
+Frontend akan berjalan di: `http://localhost:5173` atau `http://localhost:3000`
 
 ---
 
-## 🌐 Deployment to VPS Linux
+## 🌐 Deploy ke VPS Linux
 
-### Prerequisites
+### Prasyarat
 
-- Ubuntu 20.04+ VPS
-- Root or sudo access
-- Minimum 4GB RAM, 2 CPU cores
+- VPS Ubuntu 20.04+
+- Akses root atau sudo
+- Minimum 4GB RAM, 2 CPU core
 
-### 1. Initial Server Setup
+### 1. Setup Server Awal
 
 ```bash
-# Update system
+# Update sistem
 sudo apt update && sudo apt upgrade -y
 
-# Install required packages
+# Install paket yang dibutuhkan
 sudo apt install -y python3.10 python3-pip python3-venv \
     mysql-server nginx supervisor git curl \
     ffmpeg build-essential libmysqlclient-dev
@@ -237,10 +237,10 @@ sudo apt install -y nodejs
 ### 3. Setup MySQL
 
 ```bash
-# Secure MySQL installation
+# Amankan instalasi MySQL
 sudo mysql_secure_installation
 
-# Create database
+# Buat database
 sudo mysql -u root -p
 ```
 
@@ -252,10 +252,10 @@ FLUSH PRIVILEGES;
 EXIT;
 ```
 
-### 4. Clone and Setup Application
+### 4. Clone dan Setup Aplikasi
 
 ```bash
-# Create app directory
+# Buat direktori aplikasi
 sudo mkdir -p /var/www/abis
 sudo chown $USER:$USER /var/www/abis
 cd /var/www/abis
@@ -270,11 +270,11 @@ source venv/bin/activate
 pip install -r requirements.txt
 pip install gunicorn
 
-# Create production .env
+# Buat .env produksi
 nano .env
 ```
 
-Production `.env`:
+`.env` produksi:
 ```env
 DATABASE_URL=mysql+pymysql://abis_user:your_strong_password@localhost:3306/abis_interview
 SECRET_KEY=$(openssl rand -hex 32)
@@ -289,14 +289,14 @@ DEEPFACE_BACKEND=opencv
 ```
 
 ```bash
-# Create uploads directory
+# Buat direktori uploads
 mkdir -p /var/www/abis/uploads
 chmod 755 /var/www/abis/uploads
 
-# Run migrations
+# Jalankan migrasi
 python -m alembic upgrade head
 
-# Create admin user
+# Buat admin user
 python create_admin.py
 ```
 
@@ -308,7 +308,7 @@ cd /var/www/abis/frontend
 # Install dependencies
 npm install
 
-# Create production .env
+# Buat .env produksi
 nano .env
 ```
 
@@ -317,11 +317,11 @@ VITE_API_URL=https://yourdomain.com/api
 ```
 
 ```bash
-# Build for production
+# Build untuk produksi
 npm run build
 ```
 
-### 6. Configure Supervisor (Backend)
+### 6. Konfigurasi Supervisor (Backend)
 
 ```bash
 sudo nano /etc/supervisor/conf.d/abis-backend.conf
@@ -347,7 +347,7 @@ sudo supervisorctl update
 sudo supervisorctl start abis-backend
 ```
 
-### 7. Configure Nginx
+### 7. Konfigurasi Nginx
 
 ```bash
 sudo nano /etc/nginx/sites-available/abis
@@ -393,22 +393,22 @@ server {
 ```
 
 ```bash
-# Enable site
+# Aktifkan site
 sudo ln -s /etc/nginx/sites-available/abis /etc/nginx/sites-enabled/
 sudo nginx -t
 sudo systemctl restart nginx
 ```
 
-### 8. Setup SSL (Optional but Recommended)
+### 8. Setup SSL (Opsional tapi Disarankan)
 
 ```bash
 # Install Certbot
 sudo apt install -y certbot python3-certbot-nginx
 
-# Get SSL certificate
+# Dapatkan sertifikat SSL
 sudo certbot --nginx -d yourdomain.com -d www.yourdomain.com
 
-# Auto-renewal is configured automatically
+# Auto-renewal sudah diatur otomatis
 ```
 
 ### 9. Setup Firewall
@@ -419,56 +419,56 @@ sudo ufw allow OpenSSH
 sudo ufw enable
 ```
 
-### 10. Verify Deployment
+### 10. Verifikasi Deploy
 
 ```bash
-# Check backend status
+# Cek status backend
 sudo supervisorctl status abis-backend
 
-# Check backend logs
+# Cek log backend
 sudo tail -f /var/log/abis-backend.log
 
-# Check Nginx
+# Cek Nginx
 sudo systemctl status nginx
 ```
 
-Visit: `https://yourdomain.com`
+Kunjungi: `https://yourdomain.com`
 
 ---
 
-## ⚙️ Configuration
+## ⚙️ Konfigurasi
 
-### Backend Configuration
+### Konfigurasi Backend
 
-All backend configuration is in `.env` file:
+Semua konfigurasi backend ada di file `.env`:
 
-| Variable | Description | Default |
-|----------|-------------|---------|
-| `DATABASE_URL` | MySQL connection string | - |
-| `SECRET_KEY` | JWT secret key | - |
-| `ACCESS_TOKEN_EXPIRE_MINUTES` | Token expiration | 30 |
-| `CORS_ORIGINS` | Allowed origins (comma-separated) | * |
-| `UPLOAD_DIR` | Upload directory path | uploads |
-| `MAX_FILE_SIZE` | Max file size in bytes | 100MB |
-| `WHISPER_MODEL` | Whisper model size | large-v2 |
-| `WHISPER_DEVICE` | Processing device | cpu |
-| `DEEPFACE_BACKEND` | Face detection backend | opencv |
+| Variabel | Deskripsi | Default |
+|----------|-----------|---------|
+| `DATABASE_URL` | String koneksi MySQL | - |
+| `SECRET_KEY` | Kunci rahasia JWT | - |
+| `ACCESS_TOKEN_EXPIRE_MINUTES` | Kadaluarsa token | 30 |
+| `CORS_ORIGINS` | Origin yang diizinkan (pisahkan koma) | * |
+| `UPLOAD_DIR` | Path direktori upload | uploads |
+| `MAX_FILE_SIZE` | Maksimal ukuran file (byte) | 100MB |
+| `WHISPER_MODEL` | Ukuran model Whisper | large-v2 |
+| `WHISPER_DEVICE` | Device pemrosesan | cpu |
+| `DEEPFACE_BACKEND` | Backend deteksi wajah | opencv |
 
-### Frontend Configuration
+### Konfigurasi Frontend
 
-Frontend configuration in `.env`:
+Konfigurasi frontend di file `.env`:
 
-| Variable | Description | Default |
-|----------|-------------|---------|
-| `VITE_API_URL` | Backend API URL | http://localhost:8000/api |
+| Variabel | Deskripsi | Default |
+|----------|-----------|---------|
+| `VITE_API_URL` | URL API backend | http://localhost:8000/api |
 
 ---
 
-## 📖 Usage Guide
+## 📖 Panduan Penggunaan
 
 ### 1. Login
 
-Default credentials:
+Kredensial default:
 - **Username:** admin
 - **Password:** admin123
 
@@ -482,165 +482,165 @@ Default credentials:
    - Nomor Identitas
    - Posisi
    - Jadwal
-4. Click **"Lanjut"**
+4. Klik **"Lanjut"**
 
 ### 3. Setup indikator penilaian
 
 1. Tambahkan indikator dengan isi:
-   - Nama indikator (mis., "Kepemimpinan")
-   - Deskripsi (mis., "Kemampuan memimpin tim dan mengambil keputusan")
+   - Nama indikator (misal, "Kepemimpinan")
+   - Deskripsi (misal, "Kemampuan memimpin tim dan mengambil keputusan")
    - Bobot (1-10, tinggi = semakin penting)
 
 ### 4. Memulai Wawancara
 
-1. Click **"Mulai Wawancara"**
-2. Grant camera and microphone permissions
-3. Interview recording starts with:
+1. Klik **"Mulai Wawancara"**
+2. Berikan izin kamera dan mikrofon
+3. Rekaman wawancara dimulai dengan:
    - Live video preview
-   - Audio waveform visualization
+   - Visualisasi gelombang suara
    - Timer/stopwatch
-4. Click **"Selesai"** when done
+4. Klik **"Selesai"** saat wawancara selesai
 
-### 5. Process Interview
+### 5. Proses Wawancara
 
-1. After recording, click **"Process Interview"**
-2. AI will:
-   - Transcribe audio (using Whisper)
-   - Detect emotions (facial + speech)
-   - Analyze answers against indicators
-   - Generate scores and recommendations
-3. Processing takes ~2-5 minutes depending on interview length
+1. Setelah rekaman, klik **"Process Interview"**
+2. AI akan:
+   - Mentranskrip audio (menggunakan Whisper)
+   - Deteksi emosi (wajah + suara)
+   - Analisis jawaban sesuai indikator
+   - Menghasilkan skor dan rekomendasi
+3. Proses membutuhkan waktu ~2-5 menit tergantung panjang wawancara
 
-### 6. Review Assessment
+### 6. Review Penilaian
 
-1. Go to **"Assessment"** tab
+1. Pergi ke tab **"Assessment"**
 2. Review:
-   - AI scores per indicator
-   - Evidence from transcript
-   - Reasoning
-   - Emotion charts
-3. Optionally add **Manual Scores** to override AI
+   - Skor AI per indikator
+   - Bukti dari transcript
+   - Alasan penilaian
+   - Grafik emosi
+3. Bisa menambah **Skor Manual** untuk override AI
 
-### 7. View Dashboard
+### 7. Melihat Dashboard
 
-- **Dashboard Overview** shows:
-  - Total interviews
-  - Completion rate
-  - Average scores
-  - AI success rate
-  - Score distribution chart
-  - Top 5 candidates
+- **Dashboard Overview** menampilkan:
+  - Total wawancara
+  - Tingkat penyelesaian
+  - Rata-rata skor
+  - Persentase sukses AI
+  - Grafik distribusi skor
+  - Top 5 kandidat
   - Quick actions
 
 ---
 
-## 📚 API Documentation
+## 📚 Dokumentasi API
 
-### Access API Docs
+### Akses API Docs
 
 - **Swagger UI:** http://localhost:8000/docs
 - **ReDoc:** http://localhost:8000/redoc
 
-### Main Endpoints
+### Endpoint Utama
 
-#### Authentication
+#### Autentikasi
 - `POST /api/auth/login` - Login
-- `POST /api/auth/register` - Register new user
-- `GET /api/auth/me` - Get current user
+- `POST /api/auth/register` - Registrasi pengguna baru
+- `GET /api/auth/me` - Mendapatkan user saat ini
 
-#### Interviews
-- `GET /api/interviews/` - List interviews (with pagination)
-- `POST /api/interviews/` - Create interview
-- `GET /api/interviews/{id}` - Get interview details
-- `POST /api/interviews/{id}/start` - Start interview
-- `POST /api/interviews/{id}/complete` - Complete interview
-- `POST /api/interviews/{id}/process` - Process interview with AI
-- `DELETE /api/interviews/{id}` - Delete interview
+#### Interview
+- `GET /api/interviews/` - List interview (dengan pagination)
+- `POST /api/interviews/` - Buat interview
+- `GET /api/interviews/{id}` - Detail interview
+- `POST /api/interviews/{id}/start` - Mulai interview
+- `POST /api/interviews/{id}/complete` - Selesaikan interview
+- `POST /api/interviews/{id}/process` - Proses interview dengan AI
+- `DELETE /api/interviews/{id}` - Hapus interview
 
-#### Dashboard & Analytics
-- `GET /api/interviews/dashboard/statistics` - Get dashboard stats
-- `GET /api/interviews/compare?interview_ids=1,2` - Compare candidates
-- `GET /api/interviews/{id}/recommendations` - Get AI recommendations
-- `GET /api/interviews/{id}/transcript` - Get full transcript
+#### Dashboard & Analitik
+- `GET /api/interviews/dashboard/statistics` - Statistik dashboard
+- `GET /api/interviews/compare?interview_ids=1,2` - Bandingkan kandidat
+- `GET /api/interviews/{id}/recommendations` - Rekomendasi AI
+- `GET /api/interviews/{id}/transcript` - Transcript penuh
 
-#### Indicators
-- `GET /api/interviews/{id}/indicators` - Get indicators
-- `POST /api/interviews/{id}/indicators` - Add indicator
-- `DELETE /api/interviews/{id}/indicators/{indicator_id}` - Delete indicator
+#### Indikator
+- `GET /api/interviews/{id}/indicators` - Indikator interview
+- `POST /api/interviews/{id}/indicators` - Tambah indikator
+- `DELETE /api/interviews/{id}/indicators/{indicator_id}` - Hapus indikator
 
-#### Scoring
-- `GET /api/interviews/{id}/assessment` - Get assessment results
-- `PUT /api/interviews/{id}/manual-scores` - Update manual scores
-- `POST /api/interviews/recalculate-scores` - Recalculate all scores
+#### Penilaian
+- `GET /api/interviews/{id}/assessment` - Hasil penilaian
+- `PUT /api/interviews/{id}/manual-scores` - Update skor manual
+- `POST /api/interviews/recalculate-scores` - Hitung ulang semua skor
 
 ---
 
-## 🔧 Troubleshooting
+## 🔧 Pemecahan Masalah
 
-### Common Issues
+### Masalah Umum
 
-#### 1. Backend won't start
+#### 1. Backend tidak bisa berjalan
 
 **Error:** `ModuleNotFoundError: No module named 'faster_whisper'`
 
-**Solution:**
+**Solusi:**
 ```bash
 cd backend
-source venv/bin/activate  # or venv\Scripts\activate on Windows
+source venv/bin/activate  # atau venv\Scripts\activate di Windows
 pip install -r requirements.txt
 ```
 
-#### 2. Database connection error
+#### 2. Error koneksi database
 
 **Error:** `Can't connect to MySQL server`
 
-**Solution:**
-- Check MySQL is running: `sudo systemctl status mysql`
-- Verify credentials in `.env`
-- Test connection: `mysql -u abis_user -p abis_interview`
+**Solusi:**
+- Pastikan MySQL berjalan: `sudo systemctl status mysql`
+- Cek kredensial di `.env`
+- Tes koneksi: `mysql -u abis_user -p abis_interview`
 
-#### 3. Frontend can't connect to backend
+#### 3. Frontend tidak bisa konek ke backend
 
-**Error:** `Network Error` or `CORS Error`
+**Error:** `Network Error` atau `CORS Error`
 
-**Solution:**
-- Check backend is running: `http://localhost:8000/docs`
-- Verify `VITE_API_URL` in frontend `.env`
-- Check `CORS_ORIGINS` in backend `.env`
+**Solusi:**
+- Pastikan backend berjalan: `http://localhost:8000/docs`
+- Cek `VITE_API_URL` di frontend `.env`
+- Cek `CORS_ORIGINS` di backend `.env`
 
-#### 4. Processing fails
+#### 4. Proses Interview gagal
 
-**Error:** `Whisper model not found` or `Processing failed`
+**Error:** `Whisper model not found` atau `Processing failed`
 
-**Solution:**
-- Ensure FFmpeg is installed: `ffmpeg -version`
-- Check sufficient RAM (8GB+ for large-v2 model)
-- Review logs: `sudo tail -f /var/log/abis-backend.log`
+**Solusi:**
+- Pastikan FFmpeg terinstall: `ffmpeg -version`
+- Cek RAM cukup (8GB+ untuk model large-v2)
+- Cek log: `sudo tail -f /var/log/abis-backend.log`
 
-#### 5. Upload fails
+#### 5. Upload gagal
 
 **Error:** `413 Request Entity Too Large`
 
-**Solution:**
-- Increase Nginx limit:
+**Solusi:**
+- Naikkan limit Nginx:
 ```nginx
 client_max_body_size 100M;
 ```
 - Restart Nginx: `sudo systemctl restart nginx`
 
-#### 6. Scores showing 0
+#### 6. Skor selalu 0
 
-**Solution:**
+**Solusi:**
 ```bash
-# Use recalculate endpoint via Swagger UI
-# Or re-process the interview
+# Gunakan endpoint recalculate lewat Swagger UI
+# Atau proses ulang interview
 ```
 
 ---
 
 ## 🔄 Maintenance
 
-### Update Application
+### Update Aplikasi
 
 ```bash
 cd /var/www/abis
@@ -669,20 +669,20 @@ mysqldump -u abis_user -p abis_interview > backup_$(date +%Y%m%d).sql
 mysql -u abis_user -p abis_interview < backup_20250127.sql
 ```
 
-### Monitor Logs
+### Monitor Log
 
 ```bash
-# Backend logs
+# Log backend
 sudo tail -f /var/log/abis-backend.log
 
-# Nginx access logs
+# Log akses Nginx
 sudo tail -f /var/log/nginx/access.log
 
-# Nginx error logs
+# Log error Nginx
 sudo tail -f /var/log/nginx/error.log
 ```
 
-### Check Status
+### Cek Status
 
 ```bash
 # Backend
@@ -697,40 +697,38 @@ sudo systemctl status mysql
 # Disk space
 df -h
 
-# Memory usage
+# Penggunaan memori
 free -h
 ```
 
 ---
 
-## 📄 License
+## 📄 Lisensi
 
-This project is proprietary software. All rights reserved.
-
----
-
-## 👥 Contributors
-
-- **Muhammad** - Initial development
+Proyek ini adalah perangkat lunak proprietary. All rights reserved.
 
 ---
 
-## 📞 Support
+## 👥 Kontributor
 
-For issues, questions, or contributions:
-- Create an issue on GitHub
+- **Muhammad** - Pengembangan awal
+
+---
+
+## 📞 Dukungan
+
+Untuk masalah, pertanyaan, atau kontribusi:
+- Buat issue di GitHub
 - Email: your-email@example.com
 
 ---
 
-## 🎉 Acknowledgments
+## 🎉 Ucapan Terima Kasih
 
-- **Whisper** by OpenAI - Speech recognition
-- **DeepFace** - Facial emotion detection
-- **Sentence Transformers** - Semantic text analysis
-- **FastAPI** - Modern web framework
-- **React** - UI library
+- **Whisper** oleh OpenAI - Speech recognition
+- **DeepFace** - Deteksi emosi wajah
+- **Sentence Transformers** - Analisis teks semantik
+- **FastAPI** - Framework web modern
+- **React** - Library UI
 
 ---
-
-**Built with ❤️ for better hiring decisions**
