@@ -150,16 +150,19 @@ WHISPER_DEVICE=cpu
 DEEPFACE_BACKEND=opencv
 ```
 
-3. Jalankan migrasi:
+3. Import database schema:
 ```bash
-# Apply migrations
-python -m alembic upgrade head
+# Import via MySQL CLI
+mysql -u root -p < ../database/init.sql
+
+# Or import via phpMyAdmin
+# Open phpMyAdmin → Import → Choose database/init.sql → Go
 ```
 
-4. Buat user awal:
-```bash
-python create_admin.py
-```
+**Note:** `init.sql` already includes default admin user:
+- Username: `admin`
+- Password: `admin123`
+- (Change password after first login!)
 
 #### Jalankan Backend Server
 

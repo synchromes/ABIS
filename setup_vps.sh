@@ -71,17 +71,30 @@ apt install -y nodejs
 log_step "Step 4: Configure MySQL"
 log_info "Setting up MySQL database..."
 
-# Set MySQL root password
-mysql -e "ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '$MYSQL_ROOT_PASSWORD';"
-mysql -e "FLUSH PRIVILEGES;"
+# Create MySQL configuration file temporarily (for password)
+MYSQL_CONFIG="/tmp/mysql_setup.cnf"
+cat > "$MYSQL_CONFIG" <<EOF
+[client]
+user=root
+password=$MYSQL_ROOT_PASSWORD
+EOF
+
+# Set MySQL root password (if fresh install, root has no password yet)
+mysql --defaults-extra-file="$MYSQL_CONFIG" -e "ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '$MYSQL_ROOT_PASSWORD';" 2>/dev/null || \
+mysql -u root -e "ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '$MYSQL_ROOT_PASSWORD';"
+
+mysql --defaults-extra-file="$MYSQL_CONFIG" -e "FLUSH PRIVILEGES;"
 
 # Create database and user
-mysql -u root -p"$MYSQL_ROOT_PASSWORD" <<EOF
+mysql --defaults-extra-file="$MYSQL_CONFIG" <<EOF
 CREATE DATABASE IF NOT EXISTS $DB_NAME CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 CREATE USER IF NOT EXISTS '$DB_USER'@'localhost' IDENTIFIED BY '$DB_PASSWORD';
 GRANT ALL PRIVILEGES ON $DB_NAME.* TO '$DB_USER'@'localhost';
 FLUSH PRIVILEGES;
 EOF
+
+# Remove temporary config file
+rm -f "$MYSQL_CONFIG"
 
 log_info "MySQL configured successfully"
 
@@ -129,13 +142,30 @@ EOF
 mkdir -p /var/www/abis/uploads
 chmod 755 /var/www/abis/uploads
 
-# Run migrations
-log_info "Running database migrations..."
-python -m alembic upgrade head
+# Import database schema
+log_info "Importing database schema..."
+# Create MySQL config for database user
+DB_CONFIG="/tmp/mysql_db.cnf"
+cat > "$DB_CONFIG" <<DBEOF
+[client]
+user=$DB_USER
+password=$DB_PASSWORD
+database=$DB_NAME
+DBEOF
 
-# Create admin user
-log_info "Creating admin user..."
-python create_admin.py
+# Import init.sql
+if [ -f /var/www/abis/database/init.sql ]; then
+    mysql --defaults-extra-file="$DB_CONFIG" < /var/www/abis/database/init.sql
+    log_info "Database schema imported successfully"
+else
+    log_warn "init.sql not found, skipping database import"
+fi
+
+rm -f "$DB_CONFIG"
+
+# Note: No need for alembic if using init.sql
+# If you prefer alembic, comment out the import above and uncomment below:
+# python -m alembic upgrade head
 
 deactivate
 
